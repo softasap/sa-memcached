@@ -1,0 +1,4 @@
+[submodule "roles/sa-memcached"]
+        path = roles/sa-memcached
+        url = https://github.com/softasap/sa-memcached.git
+

@@ -1,0 +1,14 @@
+---
+  - name: Memcached | Install package
+    apt: pkg=memcached state=present
+    become: yes
+    tags:
+      - memcached
+
+  - name: Memcached | Patch settings /etc/memcached.conf
+    lineinfile: dest=/etc/memcached.conf regexp="{{item.regexp}}" line="{{item.line}}"
+    with_items: "{{memcached_properties}}"
+    when: memcached_properties is defined
+    notify: restart memcached
+    become: yes
+
