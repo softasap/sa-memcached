@@ -1,2 +1,3 @@
 ---
 # tasks file for sa-memcached
+  - include: tasks_memcached.yml
