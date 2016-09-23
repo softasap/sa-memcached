@@ -1,2 +1,17 @@
 ---
 # defaults file for sa-memcached
+
+
+# EXAMPLE: If I wanted to run Memcached on port 1337, with 4GB of memory, and allow a maximum of 2,000 connections, I would change the config file as follows.
+# Let’s edit the configuration file:
+
+# /etc/memcached.conf
+
+# To the following:
+
+#  beanstalkd_properties:
+#    - {regexp: "^-p .*", line: "-p 1337"}
+#    - {regexp: "^-m .*", line: "-p 4096"}
+#    - {regexp: "^-c .*", line: "-p 2000"}
+
+

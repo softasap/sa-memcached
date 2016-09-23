@@ -7,7 +7,7 @@
 
   - name: Memcached | Patch settings /etc/memcached.conf
     lineinfile: dest=/etc/memcached.conf regexp="{{item.regexp}}" line="{{item.line}}"
-    with_items: "{{memcached_properties}}"
+    with_items: "{{memcached_properties}} |default([])"
     when: memcached_properties is defined
     notify: restart memcached
     become: yes

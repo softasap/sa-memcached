@@ -23,8 +23,10 @@ Advanced:
   roles:
     - {
         role: "sa-memcached",
-        memcached_properties:
-          - {regexp: "^#START=.*", line: "START=yes"}
+        beanstalkd_properties:
+          - {regexp: "^-p .*", line: "-p 1337"}
+          - {regexp: "^-m .*", line: "-p 4096"}
+          - {regexp: "^-c .*", line: "-p 2000"}
       }
 
 
